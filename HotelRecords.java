@@ -2,14 +2,12 @@ import java.io.*;
 
 public class HotelRecords {
     public static void main(String[] args) throws Exception {
-        File file=null;
         BufferedReader br=null;
         BufferedReader in= new BufferedReader(new InputStreamReader(System.in));
-        System.out.print("Enter the filename from which data has to be parsed");
-        String filename=in.readLine();
+        String filename= args[0];
         
         try {
-            file = new File(filename);
+            File file = new File(filename);
             
             br = new BufferedReader(new FileReader(file));
 
